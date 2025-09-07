@@ -14,4 +14,5 @@ The goal is to apply big data techniques to identify patterns, correlations, and
 We are using the **Student Performance and Learning Style** dataset, available here:  
 [https://www.kaggle.com/datasets/adilshamim8/student-performance-and-learning-style](https://www.kaggle.com/datasets/adilshamim8/student-performance-and-learning-style)
 
-The dataset gives information on each student's learning style, academic performance, and study methods. For instructions on downloading the dataset, please see the [`/data/README.md`](data/README.md).
+The dataset gives information on each student's learning style, academic performance, and study methods.
+For instructions on downloading the dataset, please see the [`/data/README.md`](data/README.md).
