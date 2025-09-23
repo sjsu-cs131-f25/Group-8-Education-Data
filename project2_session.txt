@@ -14824,4 +14824,115 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	[32mmodified:   .gitignore[m
-	[32mnew
+	[32mnew file:   out/attendance_ec_examscr.txt[m
+	[32mnew file:   out/errors.txt[m
+	[32mnew file:   out/exam_scores_60s.txt[m
+	[32mnew file:   out/freq_gender.txt[m
+	[32mnew file:   out/freq_internet.txt[m
+	[32mnew file:   out/freq_learningstyle.txt[m
+	[32mnew file:   out/freq_resources.txt[m
+	[32mnew file:   out/top10_weekly_studyhours.txt[m
+	[32mnew file:   project2_session.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   project2_session.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mout/exam_scores_90s_less.txt[m
+	[31mstudent_performance.csv[m
+
+bash-4.4$ git add out/[K[K[K[Kproject2_session.txt ou/[Kt/exam_scores_90s_less.txt
+warning: LF will be replaced by CRLF in out/exam_scores_90s_less.txt.
+The file will have its original line endings in your working directory
+bash-4.4$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   .gitignore[m
+	[32mnew file:   out/attendance_ec_examscr.txt[m
+	[32mnew file:   out/errors.txt[m
+	[32mnew file:   out/exam_scores_60s.txt[m
+	[32mnew file:   out/exam_scores_90s_less.txt[m
+	[32mnew file:   out/freq_gender.txt[m
+	[32mnew file:   out/freq_internet.txt[m
+	[32mnew file:   out/freq_learningstyle.txt[m
+	[32mnew file:   out/freq_resources.txt[m
+	[32mnew file:   out/top10_weekly_studyhours.txt[m
+	[32mnew file:   project2_session.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mstudent_performance.csv[m
+
+bash-4.4$ git commit -m "[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit checkout project2
+error: pathspec 'project2' did not match any file(s) known to git
+bash-4.4$ git checkout -b project2
+Switched to a new branch 'project2'
+bash-4.4$ git branch
+[?1h=  main[m[m
+* [32mproject2[m[m
+[K[?1l>bash-4.4$ git status
+On branch project2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   .gitignore[m
+	[32mnew file:   out/attendance_ec_examscr.txt[m
+	[32mnew file:   out/errors.txt[m
+	[32mnew file:   out/exam_scores_60s.txt[m
+	[32mnew file:   out/exam_scores_90s_less.txt[m
+	[32mnew file:   out/freq_gender.txt[m
+	[32mnew file:   out/freq_internet.txt[m
+	[32mnew file:   out/freq_learningstyle.txt[m
+	[32mnew file:   out/freq_resources.txt[m
+	[32mnew file:   out/top10_weekly_studyhours.txt[m
+	[32mnew file:   project2_session.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mstudent_performance.csv[m
+
+bash-4.4$ git commit -m "Completed steps B-F"
+[project2 97fb71c] Completed steps B-F
+ 11 files changed, 16462 insertions(+), 216 deletions(-)
+ rewrite .gitignore (100%)
+ create mode 100644 out/attendance_ec_examscr.txt
+ create mode 100644 out/errors.txt
+ create mode 100644 out/exam_scores_60s.txt
+ create mode 100644 out/exam_scores_90s_less.txt
+ create mode 100644 out/freq_gender.txt
+ create mode 100644 out/freq_internet.txt
+ create mode 100644 out/freq_learningstyle.txt
+ create mode 100644 out/freq_resources.txt
+ create mode 100644 out/top10_weekly_studyhours.txt
+ create mode 100644 project2_session.txt
+bash-4.4$ git status
+On branch project2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mstudent_performance.csv[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.4$ git push origin project2
+Enter passphrase for key '/mnt/scratch/CS131_jelenag/students/alvinl/.ssh/id_ed25519': 
+Enumerating objects: 16, done.
+Counting objects:   6% (1/16)Counting objects:  12% (2/16)Counting objects:  18% (3/16)Counting objects:  25% (4/16)Counting objects:  31% (5/16)Counting objects:  37% (6/16)Counting objects:  43% (7/16)Counting objects:  50% (8/16)Counting objects:  56% (9/16)Counting objects:  62% (10/16)Counting objects:  68% (11/16)Counting objects:  75% (12/16)Counting objects:  81% (13/16)Counting objects:  87% (14/16)Counting objects:  93% (15/16)Counting objects: 100% (16/16)Counting objects: 100% (16/16), done.
+Delta compression using up to 256 threads
+Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
+Writing objects:   7% (1/14)Writing objects:  14% (2/14)Writing objects:  21% (3/14)Writing objects:  28% (4/14)Writing objects:  42% (6/14)Writing objects:  50% (7/14)Writing objects:  57% (8/14)Writing objects:  64% (9/14)Writing objects:  71% (10/14)Writing objects:  78% (11/14)Writing objects:  85% (12/14)Writing objects:  92% (13/14)Writing objects: 100% (14/14)Writing objects: 100% (14/14), 41.86 KiB | 3.80 MiB/s, done.
+Total 14 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+remote: 
+remote: Create a pull request for 'project2' on GitHub by visiting:[K
+remote:      https://github.com/sjsu-cs131-f25/Group-8-Education-Data/pull/new/project2[K
+remote: 
+To github.com:sjsu-cs131-f25/Group-8-Education-Data.git
+ * [new branch]      project2 -> project2
+bash-4.4$ git push origin project2[C[C[C[C[C[C[C[C[C[C[Kgit push origin project2[C[C[C[C[C[C[C[C[C[C[Kexit
+exit
+
+Script done on 2025-09-23 03:03:26-04:00
