@@ -34,6 +34,8 @@ awk -F'\t' -v count="$COUNTS" '$1 == count' top30_counts.txt > top30_counts.tsv
 sort -t$'\t' -k2 -nr entity_counts.tsv | head -30 > top30_counts.tsv
 ls -lh top30_counts.tsv
 head -5 top30_counts.tsv
+tail -n +2 student_performance.csv | tr ',' '\n' | sort | uniq -c | sort -nr | head -30 > top30_overall.txt
+diff top30_counts.txt top30_overall.txt > diff_top30.txt
 
 edges_thresholded.tsv > cluster_edges.tsv
 head cluster_edges.tsv
