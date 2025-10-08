@@ -1,3 +1,5 @@
+mkdir -p ../out/Project3
+
 header=$(head -n 1 student_performance.csv)
 col1_index=$(echo "$header" | awk -F ',' '{for(i=1;i<=NF;i++) {if($i=="Attendance") print i}}')
 col2_index=$(echo "$header" | awk -F ',' '{for(i=1;i<=NF;i++) {if($i=="Motivation") print i}}')
