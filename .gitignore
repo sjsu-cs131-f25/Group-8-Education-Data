@@ -1,2 +1,9 @@
 # Directories
 data/artifacts
+scripts/updatedrun_pa4.sh
+updatedrun_pa4.sh
+scripts/updatedrun_pa4.sh
+out/
+logs/
+*.log
+.DS_Store
