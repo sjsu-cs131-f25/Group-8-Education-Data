@@ -17,8 +17,8 @@ if [ "${#}" -ne 1 ]; then
 fi
 
 INPUT="$1"
-OUTDIR="out"
-LOGDIR="logs"
+OUTDIR="../out"
+LOGDIR="../logs"
 TMPDIR="$(mktemp -d)"
 CLEANED="${TMPDIR}/cleaned.tsv"
 BEFORE_SAMPLE="${OUTDIR}/before_sample.tsv"
@@ -811,10 +811,10 @@ NR==1{
 
     # Convert to categories
     g = final_grade + 0
-    if (g >= 90) letter = "A"
-    else if (g >= 80) letter = "B" 
-    else if (g >= 70) letter = "C"
-    else if (g >= 60) letter = "D"
+    if (g == 3) letter = "A"
+    else if (g == 2) letter = "B" 
+    else if (g == 1) letter = "C"
+    else if (g == 0) letter = "D"
     else letter = "F"
 
 
