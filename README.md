@@ -51,6 +51,7 @@ First, the project environment must be set up by doing the following:
 1. Create a project.
 2. Create a bucket.
 3. Populate the bucket with input data (stored in `data/`), `pa6.py`, and a dependencies directory.
+
 Next, open the terminal and do the following commands:
 1. Define variables for the bucket name, the bucket's region, and the location of the code in the Google Cloud Storage (```$BUCKET, $REGION, $CODE_URI```).
 2. Run this following command:
