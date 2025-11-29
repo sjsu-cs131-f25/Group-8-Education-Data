@@ -46,3 +46,23 @@ For instructions on downloading the dataset, please see the [`/data/README.md`](
 
 *If compressed: stream into commands (zcat, unzip -p) rather than fully extracting when possible: Not applicable as .csv file is not compressed*
 
+## How to run script `pa6.py` as a job on a cloud environment (Google Cloud)
+First, the project environment must be set up by doing the following:
+1. Create a project.
+2. Create a bucket.
+3. Populate the bucket with input data (stored in `data/`), `pa6.py`, and a dependencies directory.
+Next, open the terminal and do the following commands:
+1. Define variables for the bucket name, the bucket's region, and the location of the code in the Google Cloud Storage (```$BUCKET, $REGION, $CODE_URI```).
+2. Run this following command:
+```
+gcloud dataproc batches submit pyspark "$CODE_URI"   --region="$REGION"   --deps-bucket="gs://$BUCKET"   --properties="\
+spark.dynamicAllocation.enabled=false,\
+spark.driver.cores=4,\
+spark.driver.memory=8g,\
+spark.executor.instances=7,\
+spark.executor.cores=4,\
+spark.executor.memory=4g"
+```
+3. See figures of graphs in `out/` in the GCS.
+* Input data: `gs://$BUCKET/data/`
+* Output data: `gs://$BUCKET/out/`
