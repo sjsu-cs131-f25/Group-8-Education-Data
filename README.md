@@ -65,5 +65,5 @@ spark.executor.cores=4,\
 spark.executor.memory=4g"
 ```
 3. See figures of graphs in `out/` in the GCS.
-* Input data: `gs://$BUCKET/data/`
+* Input data: `gs://$BUCKET/data/`, `sjsu-cs131-f25/Group-8-Education-Data/data`
 * Output data: `gs://$BUCKET/out/`
