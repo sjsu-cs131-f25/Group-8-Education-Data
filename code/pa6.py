@@ -44,6 +44,7 @@ from sklearn.preprocessing import OneHotEncoder
 from google.cloud import storage
 import io
 
+# Initialize bucket
 client = storage.Client()
 
 bucket = client.bucket(bucket_name)
@@ -71,6 +72,9 @@ dfp = pd.concat([numerical_dfp, encoded_dfp], axis=1)
 # Convert Pandas back into PySpark DataFrame
 encoded_df = spark.createDataFrame(dfp)
 encoded_df.show(20)
+
+bucket.blob("out/enc_student_performance.csv").upload_from_string(dfp.to_csv(), "text/csv")
+print("Table uploaded to out/")
 
 # Create a VectorAssembler that puts all the independent variable columns into "features".
 assembler = VectorAssembler(inputCols=[col for col in encoded_df.columns if col != 'ExamScore'], outputCol="features")
